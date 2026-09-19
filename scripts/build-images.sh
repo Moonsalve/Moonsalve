@@ -18,9 +18,16 @@ GH_TOKEN="${REPOS_TOKEN:-${GH_TOKEN:-}}" gh api graphql \
   -F query=@scripts/repositories.graphql > repositories.json
 python3 scripts/merge-stats.py contributions.json repositories.json stats.json
 
+# El banner no contiene datos, así que no hay razón para rehacerlo a diario.
+# Y sí hay una para no hacerlo: se rasteriza con las fuentes de la máquina, de
+# modo que regenerarlo en el runner y luego en local lo dejaría oscilando entre
+# dos versiones idénticas a la vista pero distintas byte a byte, con un commit
+# cada vez. Solo se rehace cuando se pide explícitamente.
 for theme in dark light; do
-  python3 scripts/generate-banner.py "$theme" "banner-$theme.svg"
-  rsvg-convert -w 2400 -h 560 "banner-$theme.svg" -o "banner-$theme.png"
+  if [ "${1:-todo}" = "todo" ]; then
+    python3 scripts/generate-banner.py "$theme" "banner-$theme.svg"
+    rsvg-convert -w 2400 -h 560 "banner-$theme.svg" -o "banner-$theme.png"
+  fi
 
   python3 scripts/generate-stats.py stats.json "$theme" "stats-$theme.svg"
   rsvg-convert -w 2400 -h 744 "stats-$theme.svg" -o "stats-$theme.png"
