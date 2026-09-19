@@ -1,0 +1,54 @@
+name: Refrescar estadísticas
+
+on:
+  # Las cifras del perfil se congelan si nadie las vuelve a calcular, y una
+  # tarjeta que dice "115 contribuciones" seis meses después es peor que no
+  # tenerla: parece actual y no lo es. Una vez al día basta; el calendario de
+  # contribuciones de GitHub no cambia más seguido.
+  schedule:
+    - cron: "23 7 * * *"
+  workflow_dispatch:
+  # También al tocar los generadores, para ver el resultado sin esperar al cron.
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - ".github/workflows/stats.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: stats
+  cancel-in-progress: false
+
+jobs:
+  refrescar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # rsvg-convert rasteriza el SVG. Se rasteriza en vez de servir el SVG
+      # directamente porque el texto usa fuentes del sistema: un SVG se
+      # resolvería distinto en cada máquina que lo abra.
+      - name: Instalar rsvg-convert
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq librsvg2-bin
+
+      - name: Regenerar banner y estadísticas
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: sh scripts/build-images.sh
+
+      # Solo se commitea si algo cambió de verdad. Un commit diario vacío
+      # ensucia el historial y, en este repo, el historial es la portada.
+      - name: Publicar si cambió
+        run: |
+          if git diff --quiet -- '*.png' '*.svg'; then
+            echo "sin cambios en las imágenes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add '*.png' '*.svg'
+          git commit -m "Estadísticas al $(date -u +%Y-%m-%d)"
+          git push

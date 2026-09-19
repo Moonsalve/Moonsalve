@@ -1,5 +1,9 @@
 <p align="center">
-  <img src="banner.png" alt="Juan Monsalve — Systems &amp; Computing Engineer, Software Engineer. Backend, cloud and applied AI. Colombia, GMT−5, jmonsalve.dev" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="banner-dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="banner-light.png">
+    <img src="banner-light.png" alt="Juan Monsalve — Systems &amp; Computing Engineer, Software Engineer. Backend, cloud and applied AI. Colombia, GMT−5, jmonsalve.dev" />
+  </picture>
 </p>
 
 <p align="center">
@@ -21,7 +25,15 @@ critical path at all.
 ## 📈 GitHub
 
 <p align="center">
-  <img src="stats.png" alt="115 contributions in the last year, 105 commits across 13 repositories. Languages by bytes: Python 39.4%, TypeScript 30.0%, Java 27.7%. Weekly activity trace." />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="stats-dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="stats-light.png">
+    <img src="stats-light.png" alt="115 contributions in the last year, 105 commits across 13 repositories, 4 pull requests, 18 active days. Languages by bytes: Python 39.4%, TypeScript 30.0%, Java 27.7%. Weekly activity trace." />
+  </picture>
+</p>
+
+<p align="center">
+<sub>Generated from the GitHub API and refreshed daily — see <code>scripts/</code>.</sub>
 </p>
 
 ---
@@ -50,31 +62,18 @@ critical path at all.
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" title="MongoDB" width="36" height="36" />
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis" title="Redis" width="36" height="36" />
 &nbsp;&nbsp;
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="Google Cloud" title="Google Cloud" width="36" height="36" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Microsoft Azure" title="Microsoft Azure" width="36" height="36" />
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" title="Docker" width="36" height="36" />
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg" alt="GitHub Actions" title="GitHub Actions" width="36" height="36" />
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" title="Linux" width="36" height="36" />
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" title="Git" width="36" height="36" />
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Microsoft Azure" title="Microsoft Azure" width="36" height="36" />
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="AWS" title="AWS" height="36" />
 </p>
 
 <p align="center">
 <sub>Applied AI day to day: Whisper, Ollama, sentence embeddings, ONNX Runtime and Pydantic schemas — the detail is in Apollo, below.</sub>
 </p>
-
----
-
-## 🛠️ Featured work
-
-| Project | What it is | Stack |
-|---|---|---|
-| **[portfolio](https://github.com/Moonsalve/portfolio)** → [jmonsalve.dev](https://jmonsalve.dev) | My personal site, in Spanish and English. It's where these projects are explained properly, with the CV downloadable in either language. | Next.js 16 · TypeScript · GitHub Actions |
-| **[asistente-local](https://github.com/Moonsalve/asistente-local)** | Apollo, a Spanish voice assistant that runs entirely on your own machine. For controlling a computer by voice without sending your audio to anyone. | Python · Whisper · Ollama · Pydantic |
-| **[chat-servidor-java](https://github.com/Moonsalve/chat-servidor-java)** | A group chat server. Many people write at the same time and everyone still sees the messages in a consistent order. | Java · NIO · Concurrency |
-
-**EM Torneos** is a league-management platform — an API plus a desktop client — that an amateur
-football league uses daily to run tournaments, matches, payments and fines. It lives in two
-private repositories; happy to walk through the architecture.
 
 ---
 
@@ -93,10 +92,24 @@ private repositories; happy to walk through the architecture.
 
 ---
 
+## 🛠️ Featured work
+
+| Project | What it is | Stack |
+|---|---|---|
+| **[portfolio](https://github.com/Moonsalve/portfolio)** → [jmonsalve.dev](https://jmonsalve.dev) | My personal site, in Spanish and English. It's where these projects are explained properly, with the CV downloadable in either language. | Next.js 16 · TypeScript · GitHub Actions |
+| **[asistente-local](https://github.com/Moonsalve/asistente-local)** | Apollo, a Spanish voice assistant that runs entirely on your own machine. For controlling a computer by voice without sending your audio to anyone. | Python · Whisper · Ollama · Pydantic |
+| **[chat-servidor-java](https://github.com/Moonsalve/chat-servidor-java)** | A group chat server. Many people write at the same time and everyone still sees the messages in a consistent order. | Java · NIO · Concurrency |
+
+**EM Torneos** is a league-management platform — an API plus a desktop client — that an amateur
+football league uses daily to run tournaments, matches, payments and fines. It lives in two
+private repositories; happy to walk through the architecture.
+
+---
+
 ## 🌐 Connect
 
 <p align="center">
-<a href="https://jmonsalve.dev"><img src="https://img.shields.io/badge/Portfolio-jmonsalve.dev-E61919?style=for-the-badge&logo=firefox&logoColor=white" alt="Portfolio" /></a>
+<a href="https://jmonsalve.dev"><img src="https://img.shields.io/badge/Portfolio-jmonsalve.dev-0969da?style=for-the-badge&logo=firefox&logoColor=white" alt="Portfolio" /></a>
 <a href="https://www.linkedin.com/in/juan-monsalve-1552442a0/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logoColor=white" alt="LinkedIn" /></a>
 <a href="mailto:JuanMonsalve.23@hotmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
 </p>

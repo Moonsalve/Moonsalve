@@ -1,3 +1,4 @@
 # Preview local generado con la API de markdown de GitHub. No pertenece al repo:
 # se regenera cuando haga falta y solo sirve para revisar antes de publicar.
 preview.html
+stats.json
