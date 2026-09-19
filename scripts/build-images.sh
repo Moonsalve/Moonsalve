@@ -9,7 +9,14 @@ export PYTHONPATH=scripts
 
 # Los PNG se sirven al doble de resolución y se muestran a la mitad: en una
 # pantalla retina un SVG rasterizado a 1x se ve sucio.
-gh api graphql -F query=@scripts/stats.graphql > stats.json
+# Cada mitad con el token que mejor la responde; el porqué está en
+# merge-stats.py. Si las variables no vienen puestas se usa la sesión de gh,
+# que en local ve todo.
+GH_TOKEN="${CONTRIB_TOKEN:-${GH_TOKEN:-}}" gh api graphql \
+  -F query=@scripts/contributions.graphql > contributions.json
+GH_TOKEN="${REPOS_TOKEN:-${GH_TOKEN:-}}" gh api graphql \
+  -F query=@scripts/repositories.graphql > repositories.json
+python3 scripts/merge-stats.py contributions.json repositories.json stats.json
 
 for theme in dark light; do
   python3 scripts/generate-banner.py "$theme" "banner-$theme.svg"
@@ -25,6 +32,6 @@ done
 
 # El JSON es un intermedio: cambia cada día y versionarlo llenaría el
 # historial de ruido sin aportar nada que no esté ya en la imagen.
-rm -f stats.json
+rm -f stats.json contributions.json repositories.json
 
 echo "imágenes regeneradas"

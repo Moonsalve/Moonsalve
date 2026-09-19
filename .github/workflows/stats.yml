@@ -44,7 +44,13 @@ jobs:
       # el workflow no se rompe.
       - name: Regenerar banner y estadísticas
         env:
-          GH_TOKEN: ${{ secrets.STATS_TOKEN || secrets.GITHUB_TOKEN }}
+          # El calendario, con el token de Actions: devuelve el mismo total
+          # que ve cualquiera en el perfil, privadas incluidas.
+          CONTRIB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Los repositorios y sus lenguajes, con el token personal: es el
+          # único que ve los privados.
+          REPOS_TOKEN: ${{ secrets.STATS_TOKEN || secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: sh scripts/build-images.sh
 
       # Solo se commitea si algo cambió de verdad. Un commit diario vacío

@@ -2,3 +2,5 @@
 # se regenera cuando haga falta y solo sirve para revisar antes de publicar.
 preview.html
 stats.json
+contributions.json
+repositories.json

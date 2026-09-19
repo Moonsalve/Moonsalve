@@ -1,0 +1,14 @@
+{
+  user(login: "Moonsalve") {
+    repositories(first: 100, ownerAffiliations: OWNER, isFork: false) {
+      totalCount
+      nodes {
+        name
+        isPrivate
+        languages(first: 12, orderBy: { field: SIZE, direction: DESC }) {
+          edges { size node { name color } }
+        }
+      }
+    }
+  }
+}
