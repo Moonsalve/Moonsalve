@@ -37,6 +37,10 @@ for theme in dark light; do
   python3 scripts/build-gif.py stats.json "$theme" "stats-$theme.gif"
 done
 
+# El texto alternativo sale de los mismos datos que la imagen. Escrito a mano
+# envejecía a la primera actualización, y le mentía justo a quien depende de él.
+python3 scripts/update-alt.py stats.json README.md
+
 # El JSON es un intermedio: cambia cada día y versionarlo llenaría el
 # historial de ruido sin aportar nada que no esté ya en la imagen.
 rm -f stats.json contributions.json repositories.json
