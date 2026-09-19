@@ -1,0 +1,25 @@
+{
+  user(login: "Moonsalve") {
+    contributionsCollection {
+      totalCommitContributions
+      totalPullRequestContributions
+      totalIssueContributions
+      restrictedContributionsCount
+      contributionCalendar {
+        totalContributions
+        weeks { contributionDays { date contributionCount } }
+      }
+    }
+    repositories(first: 100, ownerAffiliations: OWNER, isFork: false) {
+      totalCount
+      nodes {
+        name
+        isPrivate
+        stargazerCount
+        languages(first: 12, orderBy: { field: SIZE, direction: DESC }) {
+          edges { size node { name color } }
+        }
+      }
+    }
+  }
+}

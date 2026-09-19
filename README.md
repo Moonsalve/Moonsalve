@@ -18,6 +18,14 @@ critical path at all.
 
 ---
 
+## 📈 GitHub
+
+<p align="center">
+  <img src="stats.png" alt="115 contributions in the last year, 105 commits across 13 repositories. Languages by bytes: Python 39.4%, TypeScript 30.0%, Java 27.7%. Weekly activity trace." />
+</p>
+
+---
+
 ## 💻 Tech stack
 
 <p align="center">
@@ -70,15 +78,17 @@ private repositories; happy to walk through the architecture.
 
 ---
 
-## 📈 Stats
+## 🏅 Certifications
 
 <p align="center">
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Moonsalve&theme=github_dark" alt="Profile summary" />
+<a href="https://www.credly.com/badges/50053e65-ed2a-45ea-8c74-44053add6bba/public_url"><img src="https://images.credly.com/size/220x220/images/4dda8ae4-99ee-476c-bca3-6f0adbab42fe/image.png" alt="Google Cloud Computing Foundations Certificate" title="Google Cloud Computing Foundations Certificate" width="110" /></a>
+<a href="https://www.credly.com/badges/5a1f3fb1-33e6-4cd7-bdaa-f77f767ad36b/public_url"><img src="https://images.credly.com/size/220x220/images/42326d44-14ff-4eda-b9c5-7d8f12919253/image.png" alt="Set Up an App Dev Environment on Google Cloud" title="Set Up an App Dev Environment on Google Cloud" width="110" /></a>
+<a href="https://www.credly.com/badges/5e354e96-5d31-45b0-b64c-3779fd701986/public_url"><img src="https://images.credly.com/size/220x220/images/e1131ae3-4a52-4af1-9801-b7853767cf79/image.png" alt="Build a Secure Google Cloud Network" title="Build a Secure Google Cloud Network" width="110" /></a>
+<a href="https://www.credly.com/badges/55320283-a457-4865-b860-cb371e1770bd/public_url"><img src="https://images.credly.com/size/220x220/images/68756311-9319-4eeb-a2b7-76defc8dd8a2/image.png" alt="Prepare Data for ML APIs on Google Cloud" title="Prepare Data for ML APIs on Google Cloud" width="110" /></a>
 </p>
 
 <p align="center">
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Moonsalve&theme=github_dark" alt="Repositories per language" width="49%" />
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Moonsalve&theme=github_dark" alt="Most committed language" width="49%" />
+<sub>Issued by Google Cloud, October 2024 — every badge links to its verification page on <a href="https://www.credly.com/users/juan-monsalve.1dfa7e0c">Credly</a>.</sub>
 </p>
 
 ---
