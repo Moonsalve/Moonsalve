@@ -17,6 +17,10 @@ for theme in dark light; do
 
   python3 scripts/generate-stats.py stats.json "$theme" "stats-$theme.svg"
   rsvg-convert -w 2400 -h 744 "stats-$theme.svg" -o "stats-$theme.png"
+
+  # El GIF es lo que se muestra; el PNG queda como versión quieta por si
+  # alguna vista no anima.
+  python3 scripts/build-gif.py stats.json "$theme" "stats-$theme.gif"
 done
 
 # El JSON es un intermedio: cambia cada día y versionarlo llenaría el
