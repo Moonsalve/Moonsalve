@@ -185,7 +185,13 @@ def main() -> None:
     # reutilice este mismo generador en vez de duplicar el dibujo.
     t = float(sys.argv[4]) if len(sys.argv) > 4 else 1.0
     out.write_text(build(palette, data, t), encoding="utf-8")
-    print(f"escrito: {out} ({palette.name}) — {data['total']} contribuciones")
+    # Se imprime el número de repositorios porque es el síntoma de que el
+    # token no alcanza a ver los privados: si baja de golpe, la tarjeta está
+    # contando de menos y hay que revisar el secreto antes que el diseño.
+    print(
+        f"escrito: {out} ({palette.name}) — {data['total']} contribuciones, "
+        f"{data['repos']} repositorios visibles"
+    )
 
 
 if __name__ == "__main__":

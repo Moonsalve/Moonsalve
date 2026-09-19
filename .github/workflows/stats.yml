@@ -36,9 +36,15 @@ jobs:
           sudo apt-get update -qq && sudo apt-get install -y -qq librsvg2-bin
           python3 -m pip install --quiet --disable-pip-version-check pillow
 
+      # STATS_TOKEN es un token personal de solo lectura. Hace falta porque el
+      # GITHUB_TOKEN de Actions solo alcanza a ver repositorios públicos, y sin
+      # los privados la tarjeta decía que TypeScript era el 9 % del trabajo
+      # cuando es el lenguaje del sistema que está en producción. Si el secreto
+      # no existe se cae al token de Actions: la tarjeta sale incompleta, pero
+      # el workflow no se rompe.
       - name: Regenerar banner y estadísticas
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.STATS_TOKEN || secrets.GITHUB_TOKEN }}
         run: sh scripts/build-images.sh
 
       # Solo se commitea si algo cambió de verdad. Un commit diario vacío
