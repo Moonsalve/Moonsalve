@@ -28,7 +28,7 @@ critical path at all.
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="stats-dark.gif">
     <source media="(prefers-color-scheme: light)" srcset="stats-light.gif">
-    <img src="stats-light.gif" alt="139 contributions in the last year, 124 commits across 14 repositories, 6 pull requests, 19 active days. Languages by bytes: Python 46.5%, TypeScript 20.5%, Java 18.7%. Weekly activity trace." />
+    <img src="stats-light.gif" alt="144 contributions in the last year, 128 commits across 15 repositories, 6 pull requests, 20 active days. Languages by bytes: Python 55.2%, TypeScript 17.2%, Java 15.7%. Weekly activity trace." />
   </picture>
 </p>
 
